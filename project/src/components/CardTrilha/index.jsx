@@ -1,31 +1,36 @@
 import * as PropTypes from "prop-types"
+import { FaRegHeart } from "react-icons/fa";
+import { IoStarOutline } from "react-icons/io5";
+import "./style.css"
 
-function CardTrilha({ dadosTrilha }) {
+function CardTrilha({ dadosTrilha }){
 
     return (
-        <>
-            <h1>{dadosTrilha.nomeTrilha}</h1>
-            <span>{dadosTrilha.cidade} / {dadosTrilha.estado}</span>
-            <h1>Duraçao: {dadosTrilha.duracao} Min</h1>
-            <h1>Trajeto: {dadosTrilha.trajeto} Km</h1>
-            <h1>{dadosTrilha.dificuldade}</h1>
-            <h1>{dadosTrilha.tipoDeTrilha}</h1>
-            <h1>Por: {dadosTrilha.nomeDoCriador}</h1>
-            <img width={200} src={dadosTrilha.urlImgTrilha} alt="imagem trilha"></img>
-        </>
+        <div className="card-container">
+            <img className="card-imagem" width={200} src={dadosTrilha.urlImgTrilha} alt="imagem trilha"></img>
+            <div className="card-content">
+            <h5 className="card-titulo">{dadosTrilha.nomeTrilha} - {dadosTrilha.cidade} / {dadosTrilha.estado}<FaRegHeart className="coracao-favorito"/></h5>
+            <p>Por: {dadosTrilha.nomeDoCriador}</p>
+            <p>Duraçao: {dadosTrilha.duracao} Min</p>
+            <p>Trajeto: {dadosTrilha.trajeto} Km</p>
+            <p>{dadosTrilha.dificuldade}</p>
+            <p>{dadosTrilha.tipoDeTrilha}</p>
+            <span><IoStarOutline/><IoStarOutline/><IoStarOutline/><IoStarOutline/><IoStarOutline/> <a className="texto-avaliacao">Avaliações</a></span>
+            </div>
+        </div>
     )
 }
 
 CardTrilha.propTypes = {
     dadosTrilha: PropTypes.exact({
         nomeTrilha: PropTypes.string.isRequired,
-        cidade: PropTypes.string.isRequired,
-        estado: PropTypes.string.isRequired,
+        nomeDoCriador: PropTypes.string.isRequired,
         duracao: PropTypes.number.isRequired,
         trajeto: PropTypes.number.isRequired,
         dificuldade: PropTypes.string.isRequired,
+        cidade: PropTypes.string.isRequired,
+        estado: PropTypes.string.isRequired,
         tipoDeTrilha: PropTypes.oneOf(['caminhada / trekking', 'ciclismo']),
-        nomeDoCriador: PropTypes.string.isRequired,
         urlImgTrilha: PropTypes.string.isRequired,
     })
 }

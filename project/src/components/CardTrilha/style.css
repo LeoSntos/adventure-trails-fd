@@ -1,0 +1,31 @@
+.card-container {
+    display: flex;
+    box-shadow: .2em .2em .8em black;
+    height: 351px;
+    width: 960px;
+}
+
+.card-imagem {
+    width: 400px;
+    height: 351px;
+}
+.card-titulo {
+    width: 496px;
+    height: 25px;
+    font-size: 20px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coracao-favorito {
+    height: 20px;
+    margin-left: 40px;
+}
+
+.texto-avaliacao {
+    text-decoration: underline;
+}
