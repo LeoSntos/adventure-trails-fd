@@ -9,5 +9,16 @@
         "tipoDeTrilha": "caminhada / trekking",
         "nomeDoCriador": "Leonardo Brognoli",
         "urlImgTrilha": "https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "nomeTrilha": "Trilha da lagoinha do leste",
+        "cidade": "Florianópolis",
+        "estado": "SC",
+        "duracao": 220,
+        "trajeto": 6,
+        "dificuldade": "Experiente!",
+        "tipoDeTrilha": "caminhada / trekking",
+        "nomeDoCriador": "Leonardo Brognoli",
+        "urlImgTrilha": "https://images.pexels.com/photos/7893108/pexels-photo-7893108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
 ]
