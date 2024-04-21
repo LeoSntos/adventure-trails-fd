@@ -8,24 +8,26 @@ function App() {
 
   return (
     <>
-    <header><HeaderTrilha /></header>
-    <div className="container">
-      <h1 className="titulo">Explore trilhas incriveis</h1>
+      <header> <HeaderTrilha /></header>
 
-      {loading && <h4>carregando usuarios</h4>}
-      {!loading && trilhas !== null && (
-        <>
-          {trilhas.map((trilha, index) =>
-            <CardTrilha
-              key={index}
-              dadosTrilha={trilha}
-            />
-          )}
-        </>
-      )}
-    </div>
+      <div className="container">
+        <h1 className="titulo">Explore trilhas incríveis</h1>
+
+        {loading && <h4>carregando trilhas</h4>}
+        {!loading && trilhas !== null && (
+          <>
+            {trilhas.map((trilha, index) =>
+              <CardTrilha
+                dadosTrilha={trilha}
+                key={index}
+              />
+            )}
+          </>
+        )}
+        
+      </div>
     </>
   )
 }
 
-export default App;
+export default App
