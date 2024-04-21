@@ -1,0 +1,47 @@
+.body {
+    background-image: url(https://images.pexels.com/photos/2132096/pexels-photo-2132096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    height: 890px;
+    width: 100vw;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.clWhite {
+    color: #ffffff;
+}
+
+/* parte inferior */
+
+
+.bodyBotton {
+    background-color: #ffffff;
+    margin-top: 400px;
+    height: 105vh;
+    width: 100vw;
+}
+
+.title {
+    margin-bottom: 100px;
+}
+
+
+.cadastrarNovaTrilha {
+    margin-top: 100px;
+}
+
+.group {
+    margin-top: 80px;
+}
+
+#imgEstrada {
+    height: 330px;
+    width: 600px;
+}
