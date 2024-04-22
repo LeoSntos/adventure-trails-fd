@@ -1,0 +1,21 @@
+.foooter-container {
+    bottom: -5px;
+    display: flex;
+    background-color: #504908;
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    align-items: center;
+    overflow-y: hidden;
+    color: #ffffff;
+}
+
+.titulo {
+    font-size: 20px;
+    padding-right: 70rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}

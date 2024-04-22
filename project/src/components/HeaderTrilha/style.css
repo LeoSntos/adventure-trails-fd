@@ -2,7 +2,9 @@
     display: flex;
     background-color: #504908;
     width: 100vw;
-    height: 80px;
+    height: 70px;
+    overflow-y: hidden;
+    position: fixed;
 }
 
 .header-titulo {
@@ -10,6 +12,11 @@
     left: 100px;
     top: 22px;
     font-size: 12px;
+    color: #ffffff;
+}
+
+#titulo {
+    text-decoration: none;
     color: #ffffff;
 }
 

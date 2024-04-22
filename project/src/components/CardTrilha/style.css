@@ -2,7 +2,7 @@
     display: flex;
     box-shadow: .2em .2em .8em black;
     height: 351px;
-    width: 960px;
+    width: 1000px;
     margin-bottom: 20px;
 }
 
@@ -11,7 +11,7 @@
     height: 351px;
 }
 .card-titulo {
-    width: 496px;
+
     height: 25px;
     font-size: 20px;
 }
@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .coracao-favorito {
