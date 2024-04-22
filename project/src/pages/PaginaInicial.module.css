@@ -14,27 +14,33 @@
     gap: 50px;
 }
 
-.clWhite {
-    color: #ffffff;
-}
+
 
 /* parte inferior */
-
 
 .bodyBotton {
     background-color: #ffffff;
     margin-top: 400px;
-    height: 105vh;
+    height: 890px;
     width: 100vw;
+}
+
+.h1PBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 
 .title {
     margin-bottom: 100px;
+    font-size: 40px;
 }
-
 
 .cadastrarNovaTrilha {
     margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .group {
@@ -44,4 +50,16 @@
 #imgEstrada {
     height: 330px;
     width: 600px;
+}
+
+.h2 {
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+
+/* calasses universais */
+
+
+.clWhite {
+    color: #ffffff;
 }
