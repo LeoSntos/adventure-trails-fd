@@ -12,7 +12,7 @@ function PaginaInicial() {
                     <div className={styles.container}>
                         <h1 className={styles.clWhite}>Que tal aproveitar um tempo <br /> com a natureza?</h1>
                         <p className={styles.clWhite}>Junte-se à comunidade de entusiastas ao ar livre, compartilhe suas <br /> aventuras e inspire-se com as experiências de outros aventureiros. <br /> Prepare-se para explorar novos horizontes e se conectar com a natureza <br /> através do Adventure Trails!</p>
-                        <Button variant="contained">Explorar trilhas</Button>
+                        <Link to="/lista-trilha"><Button variant="contained">Explorar trilhas</Button></Link>
                     </div>
 
                     <div className={styles.bodyBotton}>
@@ -28,7 +28,7 @@ function PaginaInicial() {
                             <div className={styles.cadastrarNovaTrilha}>
                                 <div>
                                     <h2 className={styles.h2}>Compartilhe fotos, <br /> dicas e localização das <br /> suas trilhas favoritas</h2>
-                                    <Button variant="contained">Cadastrar nova trilha</Button>
+                                    <Link to="/cadastro-trilha"><Button variant="contained">Cadastrar nova trilha</Button></Link>
                                 </div>
 
                                 <img id={styles.imgEstrada} src="https://s3-alpha-sig.figma.com/img/749a/d3cd/b59b552226c32b61fb8ba0ba617adccb?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=N6icT8e0-GklSnUVCrkiTlHY9VSqj7uqYKxrJCrjT1kJo20aDiz3tSw~m2B9Pni5oFSDALY88iya~-XiJ6tW0svexricaSN77CbODZurlU4Mcnl~M2-DfWiYwpuPZdJKwbMkeYQwDutpMB3VV2AA~MBwUh73nkbRIbFtN~ADMhsp2LXetZqaw-ZROaoVNMbvVKPFydQyNkBR7KrFbtJyjnvDdE11D89KOy6CAfP6TA3S0tra1AQ0imJA29oDMMmasdMfjFQ-~L24vmCjO6PZl1-xUpJB0mmwr6pp~qLz4X~lGaI7oJBYYTBeYZfSB3GaeuC3PpFO5EXWS6uyfsSrMA__" />

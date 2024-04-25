@@ -1,14 +1,14 @@
 .header-container {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: #504908;
     width: 100vw;
-    height: 70px;
-    overflow-y: hidden;
+    height: 80px;
     position: fixed;
 }
 
 .header-titulo {
-    position: relative;
     left: 100px;
     top: 22px;
     font-size: 12px;
@@ -20,20 +20,18 @@
     color: #ffffff;
 }
 
+.ancora-group {
+    display: flex;
+    gap: 10em;
+}
 
 #primeira-ancora {
-    position: relative;
-    left: 1000px;
-    top: 25px;
+    color: #ffffff;
     font-size: 20px;
     text-decoration: none;
-    color: #ffffff;
 }
 
 #segunda-ancora {
-    position: relative;
-    left: 1100px;
-    top: 25px;
     font-size: 20px;
     text-decoration: none;
     color: #ffffff;

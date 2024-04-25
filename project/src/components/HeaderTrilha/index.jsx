@@ -8,8 +8,11 @@ function HeaderTrilha() {
             <div className="header-titulo">
                 <Link to="/" id="titulo"><h1>Adventure Trails FD</h1></Link>
             </div>
-            <Link to="/lista-trilha" id="primeira-ancora">Explorar Trilhas</Link>
-            <Link to="/cadastro-trilha" id="segunda-ancora">Cadastrar Trilhas</Link>
+
+            <div className="ancora-group">
+                <Link to="/lista-trilha" id="primeira-ancora">Explorar Trilhas</Link>
+                <Link to="/cadastro-trilha" id="segunda-ancora">Cadastrar Trilhas</Link>
+            </div>
         </div>
     )
 }

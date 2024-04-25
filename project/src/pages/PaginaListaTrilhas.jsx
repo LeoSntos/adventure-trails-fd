@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { TrilhasContext } from "../context/TrilhasContext";
 
 function PaginaListaTrilhas() {
-    const {trilhas, loading} = useContext(TrilhasContext)
+    const { trilhas, loading } = useContext(TrilhasContext)
 
     return (
         <div className="containerIndex">
