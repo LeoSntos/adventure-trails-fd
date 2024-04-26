@@ -51,7 +51,7 @@ function PaginaCadastroTrilha() {
 
             <form onSubmit={handleSubmit(onSubmit)}>
 
-                <TextField placeholder='' type='text' label="Nome da trilha" margin='normal' sx={{ width: 572, height: 60 }} {...register("nomeTrilha", {
+                <TextField placeholder={errors?.nomeTrilha?.message} type='text' label="Nome da trilha" margin='normal' sx={{ width: 572, height: 60 }} {...register("nomeTrilha", {
                     required: "Insira o nome da trilha",
                     maxLength: {
                         value: 100,
@@ -60,7 +60,7 @@ function PaginaCadastroTrilha() {
                 })}></TextField>
 
                 <div>
-                    <TextField type='number' label="Duraçao estimada (min)" margin='normal' sx={{ width: 286 }} {...register("duracao", {
+                    <TextField placeholder={errors?.duracao?.message} type='number' label="Duraçao estimada (min)" margin='normal' sx={{ width: 286 }} {...register("duracao", {
                         required: "É precios de um numero",
                         maxLength: {
                             value: 4,
@@ -68,7 +68,7 @@ function PaginaCadastroTrilha() {
                         }
                     })}></TextField>
 
-                    <TextField type='number' label="Trajeto (Km)" margin='normal' sx={{ width: 286 }} {...register("trajeto", {
+                    <TextField placeholder={errors?.trajeto?.message} type='number' label="Trajeto (Km)" margin='normal' sx={{ width: 286 }} {...register("trajeto", {
                         required: "É precios de um numero",
                         maxLength: {
                             value: 5,
@@ -78,14 +78,14 @@ function PaginaCadastroTrilha() {
                 </div>
 
                 <div>
-                    <TextField type='text' label="Cidade" margin='normal' sx={{ width: 286 }} {...register("cidade", {
+                    <TextField placeholder={errors?.cidade?.message} type='text' label="Cidade" margin='normal' sx={{ width: 286 }} {...register("cidade", {
                         required: "Insira o nome da cidade",
                         maxLength: {
                             value: 60,
                             message: "limite de 60 caracteres"
                         }
                     })}></TextField>
-                    <TextField type='text' label="Estado" margin='normal' sx={{ width: 286 }}  {...register("estado", {
+                    <TextField placeholder={errors?.estado?.message} type='text' label="Estado" margin='normal' sx={{ width: 286 }}  {...register("estado", {
                         required: "Insira o nome do estado",
                         maxLength: {
                             value: 2,
@@ -94,7 +94,7 @@ function PaginaCadastroTrilha() {
                     })}></TextField>
                 </div>
                 <div>
-                    <TextField type='text' label="Nome completo do usuario" margin='normal' sx={{ width: 286 }} {...register("nomeDoCriador", {
+                    <TextField placeholder={errors?.nomeDoCriador?.message} type='text' label="Nome completo do usuario" margin='normal' sx={{ width: 286 }} {...register("nomeDoCriador", {
                         maxLength: {
                             value: 60,
                             message: "limite de 60 caracteres"
@@ -102,6 +102,7 @@ function PaginaCadastroTrilha() {
                     })}></TextField>
 
                     <TextField
+                        placeholder={errors?.dificuldade?.message}
                         select
                         label="Dificuldade"
                         margin='normal'
@@ -120,6 +121,7 @@ function PaginaCadastroTrilha() {
                 </div>
 
                 <TextField
+                    placeholder={errors?.tipoDeTrilha?.message}
                     select
                     label="Tipo de trilha"
                     margin='normal'
@@ -137,7 +139,7 @@ function PaginaCadastroTrilha() {
                 </TextField>
 
                 <div>
-                    <TextField type='text' label="Url da trilha" margin='normal' sx={{ width: 572, height: 60 }} {...register("urlImgTrilha", {
+                    <TextField placeholder={errors?.urlImgTrilha?.message}  type='text' label="Url da trilha" margin='normal' sx={{ width: 572, height: 60 }} {...register("urlImgTrilha", {
                         maxLength: {
                             value: 300,
                             message: "A url deve conter 300 caracteres"
