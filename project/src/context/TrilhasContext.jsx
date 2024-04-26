@@ -1,14 +1,24 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch"
 
 export const TrilhasContext = createContext()
 
-export const TrilhasContextProvide = ({children}) => {
-    const [trilhas, loading] = useFetch("./public/trilhas.json")
-    const [trilhas2, setTrilhas2] = useState([])
+export const TrilhasContextProvider = ({ children }) => {
+    const { data, loading } = useFetch("/trilhas.json")
+    const [trilhas, setTrilhas] = useState([])
 
-    return(
-        <TrilhasContext.Provider value={{trilhas2, setTrilhas2, trilhas, loading}}>
+    useEffect(() => {
+        if (data && data.trilhas && !loading) {
+            setTrilhas(data.trilhas)
+        }
+    })
+
+    function adicionarTrilha(trilhasData) {
+        setTrilhas((t) => [...t, trilhasData])
+    }
+
+    return (
+        <TrilhasContext.Provider value={{ trilhas, data, setTrilhas, loading, adicionarTrilha }}>
             {children}
         </TrilhasContext.Provider>
     )

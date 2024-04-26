@@ -1,17 +1,17 @@
 import HeaderTrilha from "./components/HeaderTrilha";
 import Footertrilha from "./components/FooterTrilha";
 import { Outlet } from "react-router-dom";
-import {TrilhasContextProvide} from "./context/TrilhasContext"
+import {TrilhasContextProvider} from "./context/TrilhasContext"
 import "./App.css"
 
 function App() {
 
   return (
-    <TrilhasContextProvide>
+    <TrilhasContextProvider>
       <HeaderTrilha />
       <Outlet />
       <Footertrilha />
-    </TrilhasContextProvide>
+    </TrilhasContextProvider>
   )
 }
 

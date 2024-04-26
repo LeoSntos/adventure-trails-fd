@@ -13,7 +13,7 @@ function useFetch(url) {
             .finally(() => setLoading(false))
     }, [url])
 
-    return [data, loading]
+    return {data, loading}
 }
 
 export default useFetch

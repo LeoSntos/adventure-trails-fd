@@ -1,14 +1,22 @@
-import { TextField, MenuItem, } from '@mui/material'
+import { TextField, MenuItem, Button } from '@mui/material'
+import { TrilhasContext } from '../context/TrilhasContext'
 import styles from "./PaginaCadastroTrilha.module.css"
 import { useForm } from "react-hook-form"
+import { useContext } from 'react'
 
 function PaginaCadastroTrilha() {
     const { register, handleSubmit, formState: { errors } } = useForm()
 
+    const { adicionarTrilha } = useContext(TrilhasContext)
+
+    function onSubmit(formValue) {
+        adicionarTrilha(formValue)
+    }
+
     const Dificuldade = [
         {
-            value: 'Facil',
-            label: 'Facil',
+            value: 'Fácil',
+            label: 'Fácil',
         },
         {
             value: 'Intermediario',
@@ -41,7 +49,7 @@ function PaginaCadastroTrilha() {
 
             <h1>Cadastro de nova trilha</h1>
 
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
 
                 <TextField placeholder='' type='text' label="Nome da trilha" margin='normal' sx={{ width: 572, height: 60 }} {...register("nomeTrilha", {
                     required: "Insira o nome da trilha",
@@ -86,7 +94,7 @@ function PaginaCadastroTrilha() {
                     })}></TextField>
                 </div>
                 <div>
-                    <TextField type='text' label="Nome completo do usuario" margin='normal' sx={{ width: 286 }} {...register("nomeUsuario", {
+                    <TextField type='text' label="Nome completo do usuario" margin='normal' sx={{ width: 286 }} {...register("nomeDoCriador", {
                         maxLength: {
                             value: 60,
                             message: "limite de 60 caracteres"
@@ -97,6 +105,7 @@ function PaginaCadastroTrilha() {
                         select
                         label="Dificuldade"
                         margin='normal'
+                        defaultValue="Fácil"
                         sx={{ width: 286 }}
                         {...register("dificuldade", {
                             required: "Você deve selecionar uma dificuladade",
@@ -110,13 +119,13 @@ function PaginaCadastroTrilha() {
                     </TextField>
                 </div>
 
-
                 <TextField
                     select
                     label="Tipo de trilha"
                     margin='normal'
+                    defaultValue="Caminhada"
                     sx={{ width: 572, height: 60 }}
-                    {...register("tipoTrilha", {
+                    {...register("tipoDeTrilha", {
                         required: "Você deve selecionar uma dificuladade",
                     })}
                 >
@@ -128,7 +137,7 @@ function PaginaCadastroTrilha() {
                 </TextField>
 
                 <div>
-                    <TextField type='text' label="Url da trilha" margin='normal' sx={{ width: 572, height: 60 }} {...register("urlTrilha", {
+                    <TextField type='text' label="Url da trilha" margin='normal' sx={{ width: 572, height: 60 }} {...register("urlImgTrilha", {
                         maxLength: {
                             value: 300,
                             message: "A url deve conter 300 caracteres"
@@ -136,6 +145,7 @@ function PaginaCadastroTrilha() {
                     })}></TextField>
                 </div>
 
+                <Button variant='outlined' type='submit'>Cadastrar</Button>
             </form>
         </div>
     )
